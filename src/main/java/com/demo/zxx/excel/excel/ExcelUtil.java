@@ -62,8 +62,7 @@ public class ExcelUtil {
      * @param headLineNum 表头行数，默认为1
      * @return Excel 数据 list
      */
-    public static List<Object> readExcel(MultipartFile excel, BaseRowModel rowModel, int sheetNo,
-                                         int headLineNum) {
+    public static List<Object> readExcel(MultipartFile excel, BaseRowModel rowModel, int sheetNo, int headLineNum) {
         ExcelListener excelListener = new ExcelListener();
         ExcelReader reader = getReader(excel, excelListener);
         if (reader == null) {
