@@ -6,7 +6,10 @@ import com.alibaba.excel.metadata.BaseRowModel;
 import java.io.Serializable;
 
 /**
- *excel入库转换模型 数据库
+ *excel入库转换模型 ,这个是excel表格格式的定义对应的实体类模型,用不着和Cardmi(数据库表对应的实体,因为表格时间那些字段,在控制层或者业务层写进去就行了)
+ * 这样excel表格只传输只要数据,其他类型判断那些逻辑代码处理
+ * ---一句话,需要什么数据,写在这个模型就行了
+ *
  */
 public class CardmiDB extends BaseRowModel implements Serializable {
 

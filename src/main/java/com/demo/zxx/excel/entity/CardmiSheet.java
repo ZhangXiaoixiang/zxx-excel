@@ -6,7 +6,8 @@ import com.alibaba.excel.metadata.BaseRowModel;
 import java.io.Serializable;
 
 /**
- *
+ *excel出库转换模型
+ * ---一句话,excel需要那些数据,写在这个模型就行了
  */
 public class CardmiSheet extends BaseRowModel implements Serializable {
     /**

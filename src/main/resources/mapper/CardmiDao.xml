@@ -79,7 +79,7 @@
     cardmi_card_sell, sale_state, valid_state, `date`, product_id
   </sql>
 
-
+<!--导入数据库(excel导入数据存储)-->
     <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.demo.zxx.excel.entity.Cardmi"
             useGeneratedKeys="true">
         insert into cardmi
@@ -148,7 +148,7 @@
             </if>
         </trim>
     </insert>
-
+<!--全查询(导出excel需要的一个操作)-->
     <select id="selectCardmiList" resultType="com.demo.zxx.excel.entity.Cardmi" resultMap="BaseResultMap">
     select * from cardmi where valid_state=0
     </select>

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * cardmi
+ * cardmi 数据库表    自动生成的实体类(手写也可以,用插件生成快一点)
  * @author 
  */
 public class Cardmi implements Serializable {
