@@ -42,6 +42,8 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
+        <!--spring boot需要下面两个包就行了,后面提供了spring 项目整合需要的pom依赖方式-->
         <!--阿里的excel常规操作-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -61,6 +63,40 @@
             <artifactId>poi-ooxml-schemas</artifactId>
             <version>3.9</version>
         </dependency>
+
+
+
+
+        <!--spring 项目需要的额外poi依赖包        开始                 -->
+        <!--excel常规操作-->
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba</groupId>-->
+            <!--<artifactId>easyexcel</artifactId>-->
+            <!--<version>1.1.2-beta4</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi</artifactId>-->
+            <!--<version>3.17</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-ooxml</artifactId>-->
+            <!--<version>3.17</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-ooxml-schemas</artifactId>-->
+            <!--<version>3.17</version>-->
+        <!--</dependency>-->
+        <!--spring excel需要的额外poi依赖包          结束                 -->
+
+
+
+
+
+
+
         <!--============================================数据库(使用的是mybatis)相关====================================-->
         <!--jdbc连接数据库-->
         <dependency>
