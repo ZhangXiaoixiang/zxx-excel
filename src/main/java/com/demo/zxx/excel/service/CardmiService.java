@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface CardmiService {
     List<Cardmi> findCardmiList();
+    Cardmi addExcelCardmi(Cardmi cardmi);
 }

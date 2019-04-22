@@ -5,6 +5,7 @@ import com.demo.zxx.excel.entity.CardmiDB;
 import com.demo.zxx.excel.entity.CardmiSheet;
 import com.demo.zxx.excel.excel.ExcelUtil;
 import com.demo.zxx.excel.service.CardmiService;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -57,12 +58,33 @@ public class CardmiCtr {
         }
         System.out.println(sheetNo + "   " + headLineNum);
         List<Object> list = ExcelUtil.readExcel(excel, new CardmiDB(), 4, headLineNum);
+
         System.out.println("excel   "+excel);
         System.out.println("readExcel读取后:   "+list);
+        Cardmi cardmi=new Cardmi();
         //注意去除表头(以行作为集合的对象)
-        for (int i = 0; i < list.size(); i++) {
-
-            System.out.println("行  "+list.get(i));
+        for (int i = 1; i < list.size(); i++) {
+//            System.out.println("不要表头");
+//            System.out.println("行  "+list.get(i));
+            //list.get(i);//这是一个集合list
+            List<String> list1=  (List<String>)list.get(i);//这里需要转一下
+            cardmi.setCardmiCardName("中国石油卡密");
+            cardmi.setType(1);
+            cardmi.setCardmiCardName(list1.get(0));
+            cardmi.setCardmiCardPassword(list1.get(1));
+            cardmi.setCardmiCardMoney(Double.valueOf(list1.get(2)));
+            cardmi.setCardmiCardSell(Double.valueOf(list1.get(3)));
+//            for (int i1 = 0; i1 < list1.size(); i1++) {
+//              cardmi.setCardmiCardName(list1.get(i1));
+//
+//                System.out.println(list1.get(i1));
+//            }
+            System.out.println("卡密账号: "+list1.get(0));
+            System.out.println("卡密密码: "+list1.get(1));
+            System.out.println("卡密面值: "+list1.get(2));
+            System.out.println("卡密售价: "+list1.get(3));
+            System.out.println("--------------");
+            cardmiService.addExcelCardmi(cardmi);
 
 
         }
