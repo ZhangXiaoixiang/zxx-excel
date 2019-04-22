@@ -76,10 +76,10 @@ public class CardmiCtr {
             cardmi.setValidState(0);
             cardmi.setDate(new Date());
             cardmi.setProductId(3);//这个根据金额和类别去数据库查询的,所以为了方便这里只是个例子,暂时写死
-            System.out.println("卡密账号: "+list1.get(0));
-            System.out.print("卡密密码: "+list1.get(1));
-            System.out.print("卡密面值: "+list1.get(2));
-            System.out.print("卡密售价: "+list1.get(3)+"\n");
+            System.out.print("卡密账号: "+list1.get(0));
+            System.out.print("   卡密密码: "+list1.get(1));
+            System.out.print("   卡密面值: "+list1.get(2));
+            System.out.print("   卡密售价: "+list1.get(3)+"\n");
             System.out.println("--------------------------------------------------------------------------------");
             cardmiService.addExcelCardmi(cardmi);//没有处理异常,未来看起来简单,你知道怎么操作就像
         }
