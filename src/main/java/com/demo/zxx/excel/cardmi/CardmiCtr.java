@@ -32,7 +32,7 @@ public class CardmiCtr {
     @RequestMapping(value = "cardmi/export", method = RequestMethod.GET)
     public void writeExcel(HttpServletResponse response) throws IOException {
         List<Cardmi> cardmiList = cardmiService.findCardmiList();
-        List<CardmiSheet> list = list = new ArrayList<>();//集合只有一个,所有放在循环外面
+        List<CardmiSheet> list = new ArrayList<>();//集合只有一个,所有放在循环外面
         CardmiSheet cardmiSheet = null;
         for (int i = 0; i < cardmiList.size(); i++) {
             cardmiSheet = new CardmiSheet();//表个数据是不同的,所以new写在循环里面
